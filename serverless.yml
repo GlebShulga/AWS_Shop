@@ -1,10 +1,10 @@
-service: node-in-aws-web
+service: aws-shop-app
 
 frameworkVersion: '2'
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   # setup profile for AWS CLI.
   # profile: node-aws
 
@@ -17,7 +17,7 @@ plugins:
 
 custom:
   client:
-    bucketName: node-in-aws-web-bucket
+    bucketName: aws-second-shop-app
     distributionFolder: build
   s3BucketName: ${self:custom.client.bucketName}
 
