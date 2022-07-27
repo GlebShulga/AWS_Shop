@@ -5,6 +5,7 @@ frameworkVersion: '2'
 provider:
   name: aws
   runtime: nodejs14.x
+  region: eu-west-1
   # setup profile for AWS CLI.
   # profile: node-aws
 
@@ -17,7 +18,7 @@ plugins:
 
 custom:
   client:
-    bucketName: aws-second-shop-app
+    bucketName: aws-pet-shop-app
     distributionFolder: build
   s3BucketName: ${self:custom.client.bucketName}
 
